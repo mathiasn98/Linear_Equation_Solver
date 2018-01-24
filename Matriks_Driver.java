@@ -44,18 +44,18 @@ public class Matriks_Driver
 		while(!exit)
 		{
 			System.out.println("\nMenu : ");
-			System.out.println("1. Baca file external matriks");
-			System.out.println("2. Masukkan input matriks");
-			System.out.println("3. Tulis jawaban matriks kelayar");
-			System.out.println("4. Tulis jawaban matriks kefile external");
-			System.out.println("5. Tulis Matriks kelayar");
+			System.out.println("1. Read matrix's external file");
+			System.out.println("2. Input the matrix");
+			System.out.println("3. Print the solution");
+			System.out.println("4. Output the solution to external file");
+			System.out.println("5. Print the matrix");
 			System.out.println("6. Exit");
 			System.out.print("Masukkan nomor untuk memilih menu : ");
 			menu = s.nextInt();
 			switch (menu)
 			{
 				case 1 : {
-							m.BacaMatriksFile("cobamatriks.txt");
+							m.BacaMatriksFile("testcase.txt");
 							//m.TulisMatriks();
 							System.out.println();
 							m.MatriksEchelon();
@@ -75,7 +75,7 @@ public class Matriks_Driver
 								}
 							}
 							
-							System.out.println("Matriks sudah terbaca.");
+							System.out.println("Matrix have read.");
 							IsMatriksExist = true;
 							break;
 						 }
@@ -108,7 +108,7 @@ public class Matriks_Driver
 								x=m.CekNoSolution();
 								if (x==1)
 								{
-									System.out.println("Tidak Ada Solusi");
+									System.out.println("No solution");
 								}
 								else if(m.NBrsEff<(m.NKolEff-1))
 								{
@@ -123,7 +123,7 @@ public class Matriks_Driver
 							}
 							else
 							{
-								System.out.println("Harap Masukkan Matriks Terlebih Dahulu.");
+								System.out.println("Please input the matrix first !");
 								break;
 							}
 						 }
@@ -136,7 +136,7 @@ public class Matriks_Driver
 							}
 							else
 							{
-								System.out.println("Harap Masukkan Matriks Terlebih Dahulu.");
+								System.out.println("Input matrix first !");
 								break;
 							}
 						 }
@@ -149,7 +149,7 @@ public class Matriks_Driver
 							}
 							else
 							{
-								System.out.println("Harap Masukkan Matriks Terlebih Dahulu.");
+								System.out.println("Input matrix first !");
 								break;
 							}
 						 }
